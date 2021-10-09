@@ -82,6 +82,14 @@ img {
 }
 
 .header {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url('../img/bg.jpg') no-repeat center top / cover;
+}
+
+
+/* NAVBAR */
+
+.navbar {
   display: flex;
   align-items: center;
   padding: 30px 0;
@@ -120,4 +128,138 @@ img {
   width: 33px;
   height: 33px;
   border-radius: 50%;
+}
+
+
+/* FILM */
+
+.film {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.film__title-small {
+  font-size: var(--h2-font-size);
+  opacity: .5;
+  margin-bottom: 11px;
+}
+
+.film__title {
+  font-size: var(--h1-font-size);
+  line-height: 1.18;
+  margin: 0 0 1.5rem;
+}
+
+.film__description {
+  max-width: 570px;
+  margin-bottom: 50px;
+}
+
+.film__trailer {
+  margin: auto;
+}
+
+.film__details {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.time__icon {
+  margin-right: 14px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating__icon {
+  margin-right: 12px;
+}
+
+.rating__current {
+  font-size: var(--h2-font-size);
+}
+
+/* SESSION */
+
+.session {
+  padding-top: 46px;
+  padding-bottom: 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.session__label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.session__block {
+  display: flex;
+}
+
+.session__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  text-align: center;
+  transition: .2s linear;
+  cursor: pointer;
+}
+
+.session__item-active,
+.session__item:hover {
+  background: #FE8E05;
+  color: var(--body-color);
+}
+
+.session__item+.session__item {
+  margin-left: 15px;
+}
+
+.session__month {
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.session__day {
+  font-weight: var(--black-font-weight);
+  font-size: 1.875rem;
+  line-height: 1.17;
+}
+
+.session__week {
+  font-size: 1.1875rem;
+  line-height: 1.375;
+  text-transform: uppercase;
+}
+
+.select {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.select-cinema {
+  min-width: 470px;
 }
