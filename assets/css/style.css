@@ -6,6 +6,7 @@
   --body-color: #621402;
   --text-color: #fff;
   --btn-color: #FE8E05;
+  --btn-color-alt: #d3790d;
 
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
@@ -83,6 +84,7 @@ img {
 
 .header {
   min-height: 100vh;
+  margin-bottom: 4rem;
   background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url('../img/bg.jpg') no-repeat center top / cover;
 }
 
@@ -262,4 +264,97 @@ img {
 
 .select-cinema {
   min-width: 470px;
+}
+
+/* =============== SCHEME =============== */
+.scheme {
+  background: rgba(36, 36, 36, 0.18);
+  border-radius: 10px;
+}
+
+.scheme-svg path:not(.light) {
+  fill: rgba(255, 255, 255, .2);
+  cursor: pointer;
+}
+
+.scheme-svg path:not(.light):hover {
+  fill: rgba(255, 255, 255, .5);
+}
+
+.scheme path.booked,
+.scheme path.booked:hover {
+  fill: rgba(255, 255, 255, .05);
+  cursor: not-allowed;
+}
+
+.scheme path.active,
+.scheme path.active:hover {
+  fill: #FE8E05;
+}
+
+.legend path.free {
+  fill: rgba(255, 255, 255, .2);
+  cursor: pointer;
+}
+
+.legend path.active,
+.legend path.active:hover {
+  fill: #FE8E05;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-top: 1.4rem;
+  padding-bottom: 2.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.legend__label {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: rgba(255, 255, 255, .5);
+}
+
+.legend__label+.legend__label {
+  margin-left: 2rem;
+}
+
+/* =============== PRICE =============== */
+.price {
+  padding-top: 4rem;  
+  padding-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price__label {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.3125;
+}
+
+.price__total, .price__currency {
+  font-size: 3.25rem;
+  line-height: 1.17;  
+}
+
+.btn {
+  background-color: var(--btn-color);
+  border-radius: 5px;
+  color: #fff;
+  padding: 1.5rem 3.25rem;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.btn:hover {
+  background-color: var(--btn-color-alt);
 }
